@@ -11,10 +11,14 @@
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
+
+    <!-- script  -->
+    <script src="/feat/add-card/js/input-card.js"></script>
     <title>Add Card</title>
   </head>
   <body>
-    <div class="container">
+    <button onclick="buttonClickOn()">click here</button>
+    <div class="container" id="card-wrapper">
       <div class="row">
         <div class="col">
           <div class="Main-heading justify-content-center">
@@ -26,33 +30,40 @@
         <div class="col justify-content-center d-flex">
           <div class="card-input-wrapper">
             <div class="container">
-              <form action="">
+              <form id="form" action="">
                 <div class="row">
-                  <div class="todo-title">Title</div>
+                  <div class="todo-title col">Title</div>
+                  <div class="col text-end close">
+                    <button onclick="buttonClickOff()">+</button>
+                  </div>
                 </div>
                 <div class="row">
                   <div class="title-input">
-                    <input type="text" name="title" id="" />
+                    <input type="text" name="title" id="title" required />
                   </div>
                 </div>
                 <div class="todo-description row">Description</div>
                 <div class="row">
                   <div class="title-input">
-                    <textarea name="" id="" cols="30" rows="10"></textarea>
+                    <textarea
+                      name="description"
+                      id="description"
+                      cols="30"
+                      rows="10"
+                    ></textarea>
                   </div>
                 </div>
                 <div class="row justify-content-end p-3 add-button">
-                  <button class="">Add</button>
+                  <button class="Add" onclick="add()">Add</button>
                 </div>
               </form>
-              
             </div>
           </div>
         </div>
       </div>
-      <div class="row justify-content-end plus-button my-5 mr-2">
+      <!-- <div class="row justify-content-end plus-button my-5 mr-2">
         <button>+</button>
-      </div>
+      </div> -->
     </div>
   </body>
 </html>
