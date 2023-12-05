@@ -42,10 +42,6 @@ h1 {
   background: rgba(182, 182, 182, 0.29);
 }
 
-.title-input input::after {
-    border:1px solid red;
-}
-
 .title-input textarea {
     /* position: absolute; */
   border: none;
@@ -72,7 +68,7 @@ h1 {
   background-color: #918d89;
   color: black;
 }
-.plus-button button {
+/* .plus-button button {
   border: none;
   width: 4.25rem;
   height: 4.25rem;
@@ -83,4 +79,22 @@ h1 {
   font-family: Poppins;
   font-size: 3rem;
   padding: 0 !important;
+} */
+
+.close{
+  /*  */
+  font-family: Poppins;
+  font-size: 2rem;
+  /* padding: 0 !important;  */
+}
+
+
+.close button{
+  transform: rotate(-48.265deg);
+  border: none;
+  background-color: transparent;
+}
+
+#card-wrapper{
+  display: none;
 }
