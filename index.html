@@ -4,6 +4,31 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>todo.</title>
+    <!-- <link rel="stylesheet" href="index.css" /> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
   </head>
-  <body></body>
+  <body>
+    <div class="container mt-5">
+      <div class="row justify-content-center">
+        <h1 class="text-center col-md-12">todo.</h1>
+        <!-- Injecting Search Box -->
+        <div id="searchbox" class="col-md-12 px-4 mt-5"></div>
+        <div id="list"></div>
+        <div id="floatingbutton"></div>
+      </div>
+    </div>
+  </body>
+  <script>
+    $(document).ready(function () {
+      $("#searchbox").load("./feat/search/search.html");
+      $("#list").load("./feat/listview/view.html");
+      $("#floatingbutton").load("./feat/floatingbutton/button.html");
+    });
+  </script>
 </html>
