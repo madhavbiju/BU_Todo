@@ -43,7 +43,7 @@ h1 {
 }
 
 .title-input textarea {
-    /* position: absolute; */
+  /* position: absolute; */
   border: none;
   width: 61.5rem;
   height: 11.75rem;
@@ -81,20 +81,33 @@ h1 {
   padding: 0 !important;
 } */
 
-.close{
+.close {
   /*  */
   font-family: Poppins;
   font-size: 2rem;
   /* padding: 0 !important;  */
 }
 
-
-.close button{
+.close button {
   transform: rotate(-48.265deg);
   border: none;
   background-color: transparent;
 }
 
-#card-wrapper{
+#card-wrapper {
   display: none;
+  animation-name: animatetop;
+  animation-duration: 0.4s;
+  position: relative;
+}
+
+@keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
 }
