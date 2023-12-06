@@ -20,3 +20,9 @@ add = () => {
 
   console.log(Object.keys(formData));
 };
+
+$("input[id='title']").on("keyup", function () {
+  if ($(this).val() != "") {
+    $("button[id='add']").removeAttr("disabled");
+  }
+});
