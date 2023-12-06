@@ -98,7 +98,8 @@ h1 {
   display: none;
   animation-name: animatetop;
   animation-duration: 0.4s;
-  position: relative;
+  position: absolute;
+  z-index: 1;
 }
 
 @keyframes animatetop {
