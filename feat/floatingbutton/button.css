@@ -10,8 +10,8 @@
 .chat-bar-open {
   text-align: center;
   position: fixed;
+  right: 46%;
   bottom: 50px;
-  right: 50px;
   z-index: 99;
 }
 .chat-bar-close {
@@ -19,17 +19,17 @@
   text-align: center;
   position: fixed;
   bottom: 50px;
-  right: 50px;
+  right: 48%;
   z-index: 99;
 }
 .chat-bar-open .close,
 .chat-bar-close .close {
   background-color: #d9d9d9;
-  width: 70px;
+  width: 110px;
   cursor: pointer;
-  height: 70px;
+  height: 60px;
   padding: 15px;
-  border-radius: 50%;
+  border-radius: 10px;
   border-style: none;
   vertical-align: middle;
   box-shadow: rgb(0 0 0 / 40%) 0.5px 0.5px 3px;
