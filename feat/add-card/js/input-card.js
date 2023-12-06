@@ -5,7 +5,7 @@ buttonClickOff = () => {
   document.getElementById("card-wrapper").style.display = "none";
 };
 
-add = () => {
+addItem = () => {
   var form = document.getElementById("form");
 
   var formData = new FormData(form);
