@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+body {
+  background-color: #d3ccc4 !important;
+}
+
+.Main-heading {
+  color: #000;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 3.125rem;
+  display: flex;
+  margin-top: 20px;
+}
+
+h1 {
+  width: 23.8125rem;
+  height: 4.0625rem;
+}
+
+.card-input-wrapper {
+  background-color: #d9d9d9;
+  width: 64rem !important;
+  height: 30rem !important;
+  border-radius: 1rem;
+}
+
+.todo-title,
+.todo-description {
+  color: #656565;
+
+  font-family: Poppins;
+  font-size: 1.5rem;
+  margin: 15px 0px 10px !important;
+}
+
+.title-input input {
+  border: none;
+  width: 61.5rem;
+  height: 4rem;
+  border-radius: 0.5rem;
+  background: rgba(182, 182, 182, 0.29);
+}
+
+.title-input textarea {
+  /* position: absolute; */
+  border: none;
+  width: 61.5rem;
+  height: 11.75rem;
+  border-radius: 0.5rem;
+  background: rgba(182, 182, 182, 0.29);
+  resize: none;
+}
+.add-button button {
+  border: none;
+  width: 8.0625rem;
+  height: 3.375rem;
+
+  border-radius: 0.5rem;
+  background-color: #d3ccc4;
+  transition: 0.3s;
+  color: #656565;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 1.5rem;
+}
+.add-button button:hover {
+  background-color: #918d89;
+  color: black;
+}
+/* .plus-button button {
+  border: none;
+  width: 4.25rem;
+  height: 4.25rem;
+  fill: #d9d9d9;
+  border-radius: 50%;
+  transform: rotate(-48.265deg);
+  text-align: center;
+  font-family: Poppins;
+  font-size: 3rem;
+  padding: 0 !important;
+} */
+
+.close {
+  /*  */
+  font-family: Poppins;
+  font-size: 2rem;
+  /* padding: 0 !important;  */
+}
+
+.close button {
+  transform: rotate(-48.265deg);
+  border: none;
+  background-color: transparent;
+}
+
+#card-wrapper {
+  display: none;
+  animation-name: animatetop;
+  animation-duration: 0.4s;
+  position: absolute;
+  z-index: 1;
+}
+
+@keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
