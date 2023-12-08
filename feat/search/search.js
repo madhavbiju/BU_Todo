@@ -1,16 +1,8 @@
-function searchItem() {
-  var form = document.querySelector(".searchbox");
-  var formData = new FormData(form);
-  inputData = formData.get("search");
-  localStorage.setItem("searchInputs", inputData);
-  //   location.reload();
-//   console.log(localStorage.getItem("searchInputs"));
-}
+// Get the search parameter from the URL
+const urlSearchParams = new URLSearchParams(window.location.search);
+const searchParam = urlSearchParams.get("search");
 
-var searchInput = document.getElementById("search");
-searchInput.addEventListener("keydown", function (e) {
-  if (e.code === "Enter") {
-    //checks whether the pressed key is "Tab"
-    searchItem();
-  }
-});
+// Set the search input value to the extracted search parameter
+document.getElementById("searchInput").value = searchParam;
+// Call the createCards function to filter cards based on the search parameter
+createCards(searchParam);
