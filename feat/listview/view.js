@@ -23,14 +23,33 @@ function createCards() {
     text.className = "card-text";
     text.textContent = obj.description;
 
-    //delete button
+    //single delete button
     let deleteButton = document.createElement("button");
-    deleteButton.onclick = function () { deleteObject(title.textContent) };
+    deleteButton.textContent = "Delete ";
+    deleteButton.onclick = function () {
+      deleteObject(title.textContent);
+    };
+
+    
+
+    //check box
+    let checkBox = document.createElement("input");
+    checkBox.setAttribute("type", "checkbox");
+    checkBox.setAttribute("id", "checkbox");
+    checkBox.addEventListener("change", function () {
+      // if (this.checked) {
+      changeAdd();
+      // }
+      // else {
+      //     changeEdit();
+      //   }
+    });
 
     // Append elements
     cardBody.appendChild(title);
     cardBody.appendChild(text);
     cardBody.appendChild(deleteButton);
+    cardBody.appendChild(checkBox);
     card.appendChild(cardBody);
     cardDiv.appendChild(card);
 
