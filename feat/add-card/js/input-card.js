@@ -1,8 +1,10 @@
 buttonClickOn = () => {
   document.getElementById("card-wrapper").style.display = "block";
+  document.getElementById("chat-open-button").style.display = "none";
 };
 buttonClickOff = () => {
   document.getElementById("card-wrapper").style.display = "none";
+  document.getElementById("chat-open-button").style.display = "block";
 };
 
 addItem = () => {
