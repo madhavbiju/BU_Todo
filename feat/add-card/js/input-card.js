@@ -27,7 +27,7 @@ $("input[id='title']").on("keyup", function () {
 
 //background blur when modal open
 
-backgroundBlurOn = 7=> {
+backgroundBlurOn = ()=> {
   document.querySelector(".searchbox").style.filter = "blur(8px)";
   // document.querySelectorAll(".card").style.filter = "blur(8px)";
 
