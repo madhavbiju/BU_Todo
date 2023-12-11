@@ -15,10 +15,10 @@ function createCards(searchValue) {
     if (obj.title.toLowerCase().includes(searchValue) || searchValue === "") {
       // Create card element
       let cardDiv = document.createElement("div");
-      cardDiv.className = "col-md-6 mb-4";
+      cardDiv.className = "col-md-3 mb-4";
 
       let card = document.createElement("div");
-      card.className = "card";
+      card.className = "card border border-0";
 
       let cardBody = document.createElement("div");
       cardBody.className = "card-body";
@@ -33,35 +33,39 @@ function createCards(searchValue) {
       text.className = "card-text";
       text.textContent = obj.description;
 
-    //single delete button
-    let deleteButton = document.createElement("button");
-    deleteButton.textContent = "Delete ";
-    deleteButton.onclick = function () {
-      deleteObject(title.textContent);
-    };
+      //single delete button
+      let deleteButton = document.createElement("i");
+      deleteButton.className = "fa-solid fa-trash";
+      deleteButton.style.cursor = "pointer";
+      deleteButton.onclick = function () {
+        deleteObject(title.textContent);
+      };
 
-    
+      var hr = document.createElement("hr");
+      hr.className = "dotted-hr";
 
-    //check box
-    let checkBox = document.createElement("input");
-    checkBox.setAttribute("type", "checkbox");
-    checkBox.setAttribute("id", "checkbox");
-    checkBox.addEventListener("change", function () {
-      // if (this.checked) {
-      changeAdd();
-      // }
-      // else {
-      //     changeEdit();
-      //   }
-    });
+      //check box
+      let checkBox = document.createElement("input");
+      checkBox.setAttribute("type", "checkbox");
+      checkBox.setAttribute("id", "checkbox");
+      checkBox.addEventListener("change", function () {
+        // if (this.checked) {
+        changeAdd();
+        // }
+        // else {
+        //     changeEdit();
+        //   }
+      });
 
-    // Append elements
-    cardBody.appendChild(title);
-    cardBody.appendChild(text);
-    cardBody.appendChild(deleteButton);
-    cardBody.appendChild(checkBox);
-    card.appendChild(cardBody);
-    cardDiv.appendChild(card);
+      // Append elements
+      cardBody.appendChild(checkBox);
+      cardBody.appendChild(title);
+      cardBody.appendChild(hr);
+      cardBody.appendChild(text);
+      cardBody.appendChild(deleteButton);
+
+      card.appendChild(cardBody);
+      cardDiv.appendChild(card);
 
       // Append card to the container
       cardContainer.querySelector(".row").appendChild(cardDiv);
