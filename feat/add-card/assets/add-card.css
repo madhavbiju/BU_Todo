@@ -15,8 +15,8 @@ h1 {
 }
 
 .card-input-wrapper {
-  background-color: #d9d9d9;
- 
+  background-color: #ffad84;
+
   width: 64rem !important;
   height: 30rem !important;
   border-radius: 1rem;
@@ -24,7 +24,7 @@ h1 {
 
 .todo-title,
 .todo-description {
-  color: #656565;
+  color: #352923;
 
   font-family: Poppins;
   font-size: 1.5rem;
@@ -36,16 +36,15 @@ h1 {
   width: 61.5rem;
   height: 4rem;
   border-radius: 0.5rem;
-  background: rgba(182, 182, 182, 0.29);
+  background: rgba(255, 255, 255, 0.56);
 }
 
 .title-input textarea {
-  
   border: none;
   width: 61.5rem;
   height: 11.75rem;
   border-radius: 0.5rem;
-  background: rgba(182, 182, 182, 0.29);
+  background: rgba(255, 255, 255, 0.56);
   resize: none;
 }
 .add-button button {
@@ -54,27 +53,27 @@ h1 {
   height: 3.375rem;
 
   border-radius: 0.5rem;
-  background-color: #ff8000;
+  background-color: #ffdbc9;
   transition: 0.3s;
   color: #656565;
   text-align: center;
   font-family: Poppins;
   font-size: 1.5rem;
+  /* box-shadow: 10px 10px 5px lightblue; */
 }
 .add-button button:disabled {
-  background-color: #918d89;
+  background-color: #b99e91bd;
   color: black;
+  pointer-events: none;
 }
 .add-button button:hover {
   color: black;
+  box-shadow: 3px 6px 13px #000000a3;
 }
 
-
 .close {
-
   font-family: Poppins;
   font-size: 2rem;
- 
 }
 
 .close button {
