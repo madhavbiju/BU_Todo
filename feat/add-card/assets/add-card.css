@@ -16,6 +16,7 @@ h1 {
 
 .card-input-wrapper {
   background-color: #d9d9d9;
+ 
   width: 64rem !important;
   height: 30rem !important;
   border-radius: 1rem;
@@ -39,7 +40,7 @@ h1 {
 }
 
 .title-input textarea {
-  /* position: absolute; */
+  
   border: none;
   width: 61.5rem;
   height: 11.75rem;
@@ -53,35 +54,27 @@ h1 {
   height: 3.375rem;
 
   border-radius: 0.5rem;
-  background-color: #d3ccc4;
+  background-color: #ff8000;
   transition: 0.3s;
   color: #656565;
   text-align: center;
   font-family: Poppins;
   font-size: 1.5rem;
 }
-.add-button button:hover {
+.add-button button:disabled {
   background-color: #918d89;
   color: black;
 }
-/* .plus-button button {
-  border: none;
-  width: 4.25rem;
-  height: 4.25rem;
-  fill: #d9d9d9;
-  border-radius: 50%;
-  transform: rotate(-48.265deg);
-  text-align: center;
-  font-family: Poppins;
-  font-size: 3rem;
-  padding: 0 !important;
-} */
+.add-button button:hover {
+  color: black;
+}
+
 
 .close {
-  /*  */
+
   font-family: Poppins;
   font-size: 2rem;
-  /* padding: 0 !important;  */
+ 
 }
 
 .close button {
