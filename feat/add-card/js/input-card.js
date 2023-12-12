@@ -1,13 +1,13 @@
 // add button on click
-buttonClickOn = () => {
+modalOnButton = () => {
   document.getElementById("card-wrapper").style.display = "block";
-  document.getElementById("chat-open-button").style.display = "none";
+  document.getElementById("actionButton").style.display = "none";
 };
 
 // add button off click
-buttonClickOff = () => {
+modalOffButton = () => {
   document.getElementById("card-wrapper").style.display = "none";
-  document.getElementById("chat-open-button").style.display = "block";
+  document.getElementById("actionButton").style.display = "block";
 };
 
 //adding list in todo
@@ -27,7 +27,7 @@ $("input[id='title']").on("keyup", function () {
 
 //background blur when modal open
 
-backgroundBlurOn = ()=> {
+backgroundBlurOn = () => {
   document.querySelector(".searchbox").style.filter = "blur(8px)";
   // document.querySelectorAll(".card").style.filter = "blur(8px)";
 

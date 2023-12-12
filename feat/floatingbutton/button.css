@@ -1,5 +1,20 @@
-.button-bar {
-  border: 2px solid red;
-  display: flex;
-  justify-content: center;
+#actionButton {
+  color: #444;
+  background: none;
+  border-radius: 8px;
+  background-color: white;
+  background-color: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 1.75rem 3.5rem rgba(0, 0, 0, 0.1);
+  padding-left: 20px;
+  transition: all 0.2s;
+}
+
+#actionButton:active {
+  transform: translateY(4px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+}
+
+#actionButton:focus {
+  outline: none;
 }
