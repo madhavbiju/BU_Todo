@@ -44,6 +44,7 @@
       style="background: linear-gradient(#ffefba, #ffffff)"
     >
       <div class="container">
+        <div id="multi-select"></div>
         <div class="row justify-content-center">
           <div id="list"></div>
         </div>
@@ -52,6 +53,9 @@
   </body>
   <script>
     $(document).ready(function () {
+      $("#multi-select").load(
+        "./feat/multiple-selection/multipleSelection.html"
+      );
       $("#searchbox").load("./feat/search/search.html");
       $("#list").load("./feat/listview/view.html");
       $("#floatingbutton1").load("./feat/floatingbutton/button.html");
