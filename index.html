@@ -12,17 +12,28 @@
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
     <script src="/feat/store-item/store.js"></script>
   </head>
-  <body>
-    <div class="container mt-5">
+  <body style="background: linear-gradient(#ffefba, #ffffff); height: 100vh">
+    <div id="add-card"></div>
+    <header>
+      <!-- Bootstrap Static Header -->
+      <div class="jumbotron bg-cover text-white border border-white">
+        <div class="container pt-5 pb-4 text-center">
+          <h1 class="display-4 font-weight-bold col-md-12 text-black">todo.</h1>
+          <div id="searchbox" class="col-md-12 ps-3 pe-3 mt-5"></div>
+          <div id="floatingbutton1"></div>
+        </div>
+      </div>
+    </header>
+
+    <div class="container">
       <div class="row justify-content-center">
-        <h1 class="text-center col-md-12">todo.</h1>
-        <!-- Injecting Search Box -->
-        <div id="add-card"></div>
-        <div id="searchbox" class="col-md-12 px-4 mt-4"></div>
         <div id="list"></div>
-        <div id="floatingbutton1"></div>
       </div>
     </div>
   </body>
