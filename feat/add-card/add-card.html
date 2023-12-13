@@ -18,24 +18,20 @@
     <title>Add Card</title>
   </head>
   <body>
-    <!-- <button onclick="buttonClickOn()">click here</button> -->
-    <div class="container" id="card-wrapper">
-      <!-- <div class="row">
-        <div class="col">
-          <div class="Main-heading justify-content-center">
-            <h1>todo</h1>
-          </div>
-        </div>
-      </div> -->
+    <div class="container-fluid" id="card-wrapper">
       <div class="row">
         <div class="col justify-content-center d-flex">
           <div class="card-input-wrapper">
             <div class="container">
               <form id="form" action="">
                 <div class="row">
-                  <div class="todo-title col">Title</div>
+                  <div class="todo-title col">
+                    Title <font style="color: red;">*</font>
+                  </div>
                   <div class="col text-end close">
-                    <button onclick="buttonClickOff()">+</button>
+                    <button onclick="modalOffButton(); backgroundBlurOff()">
+                      +
+                    </button>
                   </div>
                 </div>
                 <div class="row">
@@ -64,9 +60,6 @@
           </div>
         </div>
       </div>
-      <!-- <div class="row justify-content-end plus-button my-5 mr-2">
-        <button>+</button>
-      </div> -->
     </div>
   </body>
 </html>

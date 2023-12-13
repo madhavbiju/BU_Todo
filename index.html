@@ -30,7 +30,7 @@
         </div>
       </div>
     </header>
-
+    <div id="multi-select"></div>
     <div class="container">
       <div class="row justify-content-center">
         <div id="list"></div>
@@ -39,10 +39,14 @@
   </body>
   <script>
     $(document).ready(function () {
+      $("#multi-select").load(
+        "./feat/multiple-selection/multipleSelection.html"
+      );
       $("#searchbox").load("./feat/search/search.html");
       $("#list").load("./feat/listview/view.html");
       $("#floatingbutton1").load("./feat/floatingbutton/button.html");
       $("#add-card").load("./feat/add-card/add-card.html");
+      
     });
   </script>
 </html>

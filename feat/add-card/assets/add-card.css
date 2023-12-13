@@ -15,15 +15,17 @@ h1 {
 }
 
 .card-input-wrapper {
-  background-color: #d9d9d9;
+  background-color: #fae295;
+
   width: 64rem !important;
   height: 30rem !important;
   border-radius: 1rem;
+  box-shadow: 3px 6px 13px #000000a3;
 }
 
 .todo-title,
 .todo-description {
-  color: #656565;
+  color: #352923;
 
   font-family: Poppins;
   font-size: 1.5rem;
@@ -35,16 +37,15 @@ h1 {
   width: 61.5rem;
   height: 4rem;
   border-radius: 0.5rem;
-  background: rgba(182, 182, 182, 0.29);
+  background: rgba(255, 255, 255, 0.56);
 }
 
 .title-input textarea {
-  /* position: absolute; */
   border: none;
   width: 61.5rem;
   height: 11.75rem;
   border-radius: 0.5rem;
-  background: rgba(182, 182, 182, 0.29);
+  background: rgba(255, 255, 255, 0.56);
   resize: none;
 }
 .add-button button {
@@ -53,35 +54,32 @@ h1 {
   height: 3.375rem;
 
   border-radius: 0.5rem;
-  background-color: #d3ccc4;
+  background-color: #b99e91bd;
   transition: 0.3s;
   color: #656565;
   text-align: center;
   font-family: Poppins;
   font-size: 1.5rem;
+  /* box-shadow: 3px 6px 13px #000000a3; */
+  /* box-shadow: 10px 10px 5px lightblue; */
+}
+.add-button button:active {
+  box-shadow: 3px 6px 13px #000000a3;
+}
+.add-button button:disabled {
+  background-color: #fcf2d0;
+  color: black;
+  pointer-events: none;
 }
 .add-button button:hover {
-  background-color: #918d89;
   color: black;
+  box-shadow: 1px 7px 21px #000000a3;
+  /* box-shadow: 3px 6px 13px #000000a3; */
 }
-/* .plus-button button {
-  border: none;
-  width: 4.25rem;
-  height: 4.25rem;
-  fill: #d9d9d9;
-  border-radius: 50%;
-  transform: rotate(-48.265deg);
-  text-align: center;
-  font-family: Poppins;
-  font-size: 3rem;
-  padding: 0 !important;
-} */
 
 .close {
-  /*  */
   font-family: Poppins;
   font-size: 2rem;
-  /* padding: 0 !important;  */
 }
 
 .close button {
@@ -92,6 +90,7 @@ h1 {
 
 #card-wrapper {
   display: none;
+  margin-top: 9%;
   animation-name: animatetop;
   animation-duration: 0.4s;
   position: absolute;
