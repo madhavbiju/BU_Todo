@@ -7,7 +7,7 @@ function createCards(searchValue) {
   if (searchValue === null) {
     searchValue = "";
   } else {
-    searchValue = searchParam.toLowerCase();
+    searchValue = searchValue.toLowerCase();
   }
 
   todo1Array.forEach((obj, index) => {
@@ -15,22 +15,22 @@ function createCards(searchValue) {
     if (obj.title.toLowerCase().includes(searchValue) || searchValue === "") {
       // Create card element
       let cardDiv = document.createElement("div");
-      cardDiv.className = "col-md-3 mb-4";
+      cardDiv.className = "col-md-12 mb-4";
 
       let card = document.createElement("div");
       card.className = "card border border-0";
 
       let cardBody = document.createElement("div");
-      cardBody.className = "card-body";
+      cardBody.className = "card-body  d-flex align-items-center";
 
       // Add title
       let title = document.createElement("h5");
-      title.className = "card-title";
+      title.className = "card-title col-md-auto col2 m-2 font-weight-bold";
       title.textContent = obj.title;
 
       // Add text
       let text = document.createElement("p");
-      text.className = "card-text";
+      text.className = "card-text m-1 text-truncate font-italic";
       text.textContent = obj.description;
 
       //single delete button
@@ -41,11 +41,9 @@ function createCards(searchValue) {
         deleteObject(title.textContent);
       };
 
-      var hr = document.createElement("hr");
-      hr.className = "dotted-hr";
-
       //check box
       let checkBox = document.createElement("input");
+      checkBox.className = "col-1";
       checkBox.setAttribute("type", "checkbox");
       checkBox.setAttribute("id", "checkbox");
       checkBox.addEventListener("change", function () {
@@ -60,7 +58,6 @@ function createCards(searchValue) {
       // Append elements
       cardBody.appendChild(checkBox);
       cardBody.appendChild(title);
-      cardBody.appendChild(hr);
       cardBody.appendChild(text);
       cardBody.appendChild(deleteButton);
 
