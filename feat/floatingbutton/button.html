@@ -1,31 +1,44 @@
 <link rel="stylesheet" href="/feat/floatingbutton/button.css" />
+<script src="/feat/multiple-selection/selection.js"></script>
 <script src="/feat/add-card/js/input-card.js"></script>
 <!-- chat open -->
-<div class="d-flex justify-content-end m-3 mb-0">
-  <button
-    id="actionButton"
-    type="button"
-    disabled
-    class="col-md-1 btn btn-outline-secondary btn-lg btn-block me-2"
-    onclick="buttonClickOn()"
-  >
-    Edit
-  </button>
-  <button
-    id="actionButton"
-    type="button"
-    disabled
-    class="col-md-1 btn btn-outline-secondary btn-lg btn-block me-2"
-    onclick="buttonClickOn()"
-  >
-    Delete
-  </button>
-  <button
-    id="actionButton"
-    type="button"
-    class="col-md-1 btn btn-outline-secondary btn-lg btn-block"
-    onclick="modalOnButton();backgroundBlurOn()"
-  >
-    Add
-  </button>
+<div class="d-flex justify-content-between m-3 mb-0">
+  <div class="col-md-4 d-flex">
+    <button
+      id="selectButton"
+      type="button"
+      class="floatButton col-md-1.5 btn btn-outline-secondary btn-lg btn-block me-2"
+      onclick="selectAll()"
+    >
+      Select All
+    </button>
+    <button
+      id="deSelectButton"
+      type="button"
+      class="floatButton col-md-1.5 btn btn-outline-secondary btn-lg btn-block me-2"
+      onclick="deSelectAll()"
+      style="display: none"
+    >
+      Deselect All
+    </button>
+  </div>
+  <div class="col-md-8 d-flex justify-content-end">
+    <button
+      id="deleteButton"
+      type="button"
+      disabled
+      class="floatButton col-md-1.5 btn btn-outline-secondary btn-lg btn-block me-2"
+      onclick="buttonClickOn()"
+    >
+      Delete
+    </button>
+    <button
+      id="addButton"
+      type="button"
+      class="floatButton col-md-1.5 btn btn-outline-secondary btn-lg btn-block"
+      onclick="modalOnButton(),backgroundBlurOn()"
+    >
+      Add
+    </button>
+  </div>
 </div>

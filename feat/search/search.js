@@ -6,3 +6,8 @@ const searchParam = urlSearchParams.get("search");
 document.getElementById("searchInput").value = searchParam;
 // Call the createCards function to filter cards based on the search parameter
 createCards(searchParam);
+
+function submitForm() {
+  // Simulate pressing the Enter key
+  document.querySelector(".searchbox").submit();
+}

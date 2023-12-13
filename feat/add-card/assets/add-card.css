@@ -15,12 +15,11 @@ h1 {
 }
 
 .card-input-wrapper {
-  background-color: #fae295;
+  background-color: #ffefba;
+  border-radius: 8px;
 
-  width: 64rem !important;
-  height: 30rem !important;
-  border-radius: 1rem;
-  box-shadow: 3px 6px 13px #000000a3;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 1.75rem 3.5rem rgba(0, 0, 0, 0.1);
 }
 
 .todo-title,
@@ -29,12 +28,10 @@ h1 {
 
   font-family: Poppins;
   font-size: 1.5rem;
-  margin: 15px 0px 10px !important;
 }
 
 .title-input input {
   border: none;
-  width: 61.5rem;
   height: 4rem;
   border-radius: 0.5rem;
   background: rgba(255, 255, 255, 0.56);
@@ -42,39 +39,32 @@ h1 {
 
 .title-input textarea {
   border: none;
-  width: 61.5rem;
   height: 11.75rem;
   border-radius: 0.5rem;
   background: rgba(255, 255, 255, 0.56);
   resize: none;
 }
-.add-button button {
-  border: none;
-  width: 8.0625rem;
-  height: 3.375rem;
 
-  border-radius: 0.5rem;
-  background-color: #b99e91bd;
-  transition: 0.3s;
-  color: #656565;
-  text-align: center;
-  font-family: Poppins;
-  font-size: 1.5rem;
-  /* box-shadow: 3px 6px 13px #000000a3; */
-  /* box-shadow: 10px 10px 5px lightblue; */
+.add-button button {
+  color: #444;
+  background: none;
+  border: none;
+  border-radius: 40px;
+  background-color: white;
+  background-color: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 1.75rem 3.5rem rgba(0, 0, 0, 0.1);
+  padding-left: 20px;
+  transition: all 0.2s;
 }
+
 .add-button button:active {
-  box-shadow: 3px 6px 13px #000000a3;
+  transform: translateY(4px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
 }
-.add-button button:disabled {
-  background-color: #fcf2d0;
-  color: black;
-  pointer-events: none;
-}
-.add-button button:hover {
-  color: black;
-  box-shadow: 1px 7px 21px #000000a3;
-  /* box-shadow: 3px 6px 13px #000000a3; */
+
+.add-button button:focus {
+  outline: none;
 }
 
 .close {

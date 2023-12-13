@@ -30,7 +30,7 @@ function createCards(searchValue) {
 
       // Add text
       let text = document.createElement("p");
-      text.className = "card-text m-1 text-truncate font-italic";
+      text.className = "card-text m-1 ms-2 text-truncate font-italic";
       text.textContent = obj.description;
 
       //single delete button

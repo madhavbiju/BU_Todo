@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>todo.</title>
+    <title>getItDone()</title>
     <!-- <link rel="stylesheet" href="index.css" /> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <link
@@ -19,7 +19,7 @@
     <script src="/feat/store-item/store.js"></script>
   </head>
   <body style="background-color: #ffefba">
-    <div id="add-card"></div>
+    <div id="add-card" class="sticky-top"></div>
     <header
       class="sticky-top"
       style="
@@ -27,12 +27,15 @@
         background-color: rgba(255, 255, 255, 0.6);
         backdrop-filter: blur(30px);
         box-shadow: 0 1rem 3.5rem rgba(0, 0, 0, 0.1);
+        z-index: 1;
       "
     >
       <!-- Bootstrap Static Header -->
       <div class="jumbotron bg-cover text-white">
         <div class="container pt-5 pb-4 text-center">
-          <h1 class="display-4 font-weight-bold col-md-12 text-black">todo.</h1>
+          <h1 class="display-4 font-weight-bold col-md-12 text-black">
+            getItDone()
+          </h1>
           <div id="searchbox" class="col-md-12 ps-3 pe-3 mt-5"></div>
           <div id="floatingbutton1"></div>
         </div>

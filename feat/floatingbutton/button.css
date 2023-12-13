@@ -1,4 +1,4 @@
-#actionButton {
+.floatButton {
   color: #444;
   background: none;
   border: none;
@@ -11,11 +11,11 @@
   transition: all 0.2s;
 }
 
-#actionButton:active {
+.floatButton:active {
   transform: translateY(4px);
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
 }
 
-#actionButton:focus {
+.floatButton:focus {
   outline: none;
 }
