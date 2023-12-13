@@ -23,9 +23,14 @@ function createCards() {
     text.className = "card-text";
     text.textContent = obj.description;
 
+    //delete button
+    let deleteButton = document.createElement("button");
+    deleteButton.onclick = function () { deleteObject(title.textContent) };
+
     // Append elements
     cardBody.appendChild(title);
     cardBody.appendChild(text);
+    cardBody.appendChild(deleteButton);
     card.appendChild(cardBody);
     cardDiv.appendChild(card);
 
