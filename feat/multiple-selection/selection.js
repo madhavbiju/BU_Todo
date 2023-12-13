@@ -1,20 +1,25 @@
-let buttonAdd = document.getElementById("actionButton");
+let buttonAdd = document.getElementById("addButton");
 
 function changeAdd() {
   globalThis.checkboxes = document.querySelectorAll(
     'input[id="checkbox"]:checked'
   );
 
-  // console.log(checkboxes);
+  console.log(checkboxes);
 
   // Check if there is at least one checkbox checked
   if (checkboxes.length > 0) {
-    buttonAdd.textContent = "Delete";
+    // buttonAdd.textContent = "Delete";
+    // document.querySelector("");
     console.log(checkboxes);
-    document.querySelector(".multi-select").style.display = "block";
+    document.querySelector("#deleteButton").removeAttribute("disabled");
+    // document.querySelector(".multi-select").style.display = "block";
     // buttonAdd.onclick = "";
   } else {
     // Set the button text to its original state if no checkboxes are checked
+    document
+      .querySelector("#deleteButton")
+      .setAttribute("disabled", "disabled");
     document.querySelector(".multi-select").style.display = "none";
     buttonAdd.textContent = "Add";
     buttonAdd.onclick = buttonClickOn(); // Replace "originalText" with the actual original text

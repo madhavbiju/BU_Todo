@@ -35,11 +35,11 @@ function createCards(searchValue) {
 
       //single delete button
       let deleteButton = document.createElement("i");
-      deleteButton.className = "fa-solid fa-trash";
-      deleteButton.style.cursor = "pointer";
-      deleteButton.onclick = function () {
-        deleteObject(title.textContent);
-      };
+      // deleteButton.className = "fa-solid fa-trash";
+      // deleteButton.style.cursor = "pointer";
+      // deleteButton.onclick = function () {
+      //   deleteObject();
+      // };
 
       //check box
       let checkBox = document.createElement("input");

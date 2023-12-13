@@ -1,4 +1,4 @@
-#actionButton {
+#addButton {
   color: #444;
   background: none;
   border: none;
@@ -11,11 +11,11 @@
   transition: all 0.2s;
 }
 
-#actionButton:active {
+#addButton:active {
   transform: translateY(4px);
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
 }
 
-#actionButton:focus {
+#addButton:focus {
   outline: none;
 }
