@@ -21,7 +21,7 @@ function deleteObject() {
     // console.log("check");
     // console.log(checkboxes);
     checkboxes.forEach((item) => {
-      // console.log("item");
+      console.log("item");
       // console.log(item);
       // console.log(item.nextSibling.textContent);
       todoArray = todoArray.filter(
@@ -31,6 +31,26 @@ function deleteObject() {
     });
     location.reload();
   }
+}
+function editObject() {
+  console.log("edit working");
+  let checkboxes = document.querySelectorAll('input[id="checkbox"]:checked');
+  // console.log(checkboxes);
+
+  // if (confirm("Do you want to continue")) {
+  // console.log("check");
+  // console.log(checkboxes);
+  // checkboxes.forEach((item) => {
+  // console.log("item");
+  // console.log(item);
+  // console.log(item.nextSibling.textContent);
+  // todoArray = todoArray.filter(
+  // (obj) => obj.title !== item.nextSibling.textContent
+  // );
+  // updateLocalStorage();
+  // });
+  // location.reload();
+  // }
 }
 
 // Function to update the local storage with the current array
