@@ -1,18 +1,13 @@
-var selectButton = document.getElementById("selectButton");
-var deSelectButton = document.getElementById("deSelectButton");
+function enableDeleteButton() {
+  globalThis.checkboxes = document.querySelectorAll("input.checkboxes:checked");
 
-function changeAdd() {
-  globalThis.checkboxes = document.querySelectorAll(
-    'input[id="checkbox"]:checked'
-  );
-
+  console.log(checkboxes);
   if (checkboxes.length > 0) {
-    deSelectButton.style.display = "block";
-    selectButton.onclick = deselectAll;
+    document.getElementById("deleteButton").removeAttribute("disabled");
   } else {
-    deSelectButton.style.display = "none";
-    selectButton.textContent = "Select All";
-    selectButton.onclick = buttonClickOn();
+    document
+      .getElementById("deleteButton")
+      .setAttribute("disabled", "disabled");
   }
 }
 function selectAll() {

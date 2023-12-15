@@ -14,6 +14,9 @@ modalOffButton = () => {
 addItem = () => {
   var form = document.getElementById("form");
   var formData = new FormData(form);
+  if (formData == null) {
+    formData = "";
+  }
   addObject(formData.get("title"), formData.get("description"));
 };
 
