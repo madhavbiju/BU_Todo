@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>todo.</title>
+    <title>getItDone()</title>
     <!-- <link rel="stylesheet" href="index.css" /> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <link
@@ -18,31 +18,45 @@
     />
     <script src="/feat/store-item/store.js"></script>
   </head>
-  <body style="background: linear-gradient(#ffefba, #ffffff); height: 100vh">
-    <div id="add-card"></div>
-    <div id="edit-card"></div>
-    <header>
+  <body style="background-color: #ffefba">
+    <div id="add-card" class="sticky-top"></div>
+    <div id="edit-card" class="sticky-top"></div>
+    <header
+      class="sticky-top"
+      style="
+        background-color: white;
+        background-color: rgba(255, 255, 255, 0.6);
+        backdrop-filter: blur(30px);
+        box-shadow: 0 1rem 3.5rem rgba(0, 0, 0, 0.1);
+        z-index: 1;
+      "
+    >
       <!-- Bootstrap Static Header -->
-      <div class="jumbotron bg-cover text-white border border-white">
+      <div class="jumbotron bg-cover text-white">
         <div class="container pt-5 pb-4 text-center">
-          <h1 class="display-4 font-weight-bold col-md-12 text-black">todo.</h1>
+          <h1 class="display-4 font-weight-bold col-md-12 text-black">
+            getItDone()
+          </h1>
           <div id="searchbox" class="col-md-12 ps-3 pe-3 mt-5"></div>
           <div id="floatingbutton1"></div>
         </div>
       </div>
     </header>
-    <div id="multi-select"></div>
-    <div class="container">
-      <div class="row justify-content-center">
-        <div id="list"></div>
+
+    <div class="container-fluid" style="background: #ffefba">
+      <div class="container">
+        <!-- <div id="multi-select"></div> -->
+        <div class="row justify-content-center">
+          <div id="list"></div>
+        </div>
       </div>
     </div>
   </body>
   <script>
     $(document).ready(function () {
-      $("#multi-select").load(
-        "./feat/multiple-selection/multipleSelection.html"
-      );
+      // $("#multi-select").load(
+      //   "./feat/multiple-selection/multipleSelection.html"
+      // );
       $("#searchbox").load("./feat/search/search.html");
       $("#list").load("./feat/listview/view.html");
       $("#floatingbutton1").load("./feat/floatingbutton/button.html");
@@ -50,4 +64,5 @@
       $("#edit-card").load("./feat/edit/edit.html");
     });
   </script>
+  <script src="feat/db/fetch.js"></script>
 </html>

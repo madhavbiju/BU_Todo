@@ -1,81 +1,49 @@
-let buttonAdd = document.getElementById("addButton");
+const { describe } = require("node:test");
 
-function changeAdd() {
-  globalThis.checkboxes = document.querySelectorAll(
-    'input[id="checkbox"]:checked'
-  );
+function enableDeleteButton() {
+  globalThis.checkboxes = document.querySelectorAll("input.checkboxes:checked");
 
   console.log(checkboxes);
-
-  // Check if there is at least one checkbox checked
   if (checkboxes.length > 0) {
-    // buttonAdd.textContent = "Delete";
-    // document.querySelector("");
-    console.log(checkboxes);
-    document.querySelector("#deleteButton").removeAttribute("disabled");
-    document.querySelector("#editButton").removeAttribute("disabled");
-    // document.querySelector(".multi-select").style.display = "block";
-    // buttonAdd.onclick = "";
-    if (checkboxes.length == 1) {
-      console.log(checkboxes.length);
-      console.log("test");
-      document.querySelector("#editButton").removeAttribute("disabled");
-    } else {
-      document
-        .querySelector("#editButton")
-        .setAttribute("disabled", "disabled");
-    }
+    document.getElementById("deleteButton").removeAttribute("disabled");
   } else {
-    // Set the button text to its original state if no checkboxes are checked
     document
-      .querySelector("#deleteButton")
+      .getElementById("deleteButton")
       .setAttribute("disabled", "disabled");
-    document.querySelector("#editButton").setAttribute("disabled", "disabled");
-
-    // document.querySelector(".multi-select").style.display = "none";
-    buttonAdd.textContent = "Add";
-    buttonAdd.onclick = buttonClickOn(); // Replace "originalText" with the actual original text
   }
 }
-
-//multiple delete button
-checkboxes.forEach((item) => {
-  console.log(item);
-  console.log("test");
-});
-
 function selectAll() {
-  // console.log("inside select all");
-  // selectALlCheckBox = document.getElementById("selectAllCheckbox");
-  // if (selectALlCheckBox.checked == true) {
-  checkboxes = document.querySelectorAll("#checkbox");
-  // console.log(checkboxes);
+  checkboxes = document.querySelectorAll(".checkboxes");
+  console.log(checkboxes);
   checkboxes.forEach((item) => {
     item.checked = true;
   });
-  // }
+  // deSelectButton.style.display = "block";
 }
-function deselectAll() {
-  // console.log("inside select all");
-  // selectALlCheckBox = document.getElementById("selectAllCheckbox");
-  // if (selectALlCheckBox.checked == false) {
-  checkboxes = document.querySelectorAll("#checkbox");
-  // console.log(checkboxes);
+function deSelectAll() {
+  checkboxes = document.querySelectorAll(".checkboxes");
   checkboxes.forEach((item) => {
     item.checked = false;
   });
-  //   }
+  deSelectButton.style.display = "none";
 }
 
 function selectOrDeselect() {
-  selectALlCheckBox = document.getElementById("selectAllCheckbox");
-  if (selectALlCheckBox.checked == true) {
+  let selectButton = document.getElementById("selectButton");
+  if (selectButton.checked) {
     selectAll();
     document.querySelector("#deleteButton").removeAttribute("disabled");
   } else {
-    deselectAll();
-    document
-      .querySelector("#deleteButton")
-      .setAttribute("disabled", "disabled");
+    deSelectAll();
+  }
+}
+
+function selectAllDisable() {
+  let checkBoxChecked = document.querySelectorAll("input.checkboxes:checked");
+  let checkBoxAll = document.querySelectorAll("input.checkboxes");
+  if (checkBoxAll.length > checkBoxChecked.length) {
+    document.getElementById("selectButton").checked = false;
+  } else if ((checkBoxAll.length = checkBoxChecked.length)) {
+    document.getElementById("selectButton").checked = true;
   }
 }

@@ -2,8 +2,7 @@
 editModalOn = () => {
   document.getElementById("edit-wrapper").style.display = "block";
   // document.getElementById("actionButton").style.display = "none";
-  let checkbox = document.querySelectorAll('input[id="checkbox"]:checked');
-
+  let checkbox = document.querySelectorAll("input.checkboxes:checked");
   console.log(checkbox[0].nextSibling.textContent);
 
   document
@@ -54,3 +53,10 @@ editModalOff = () => {
 //   var els = document.querySelectorAll(".card");
 //   for (var x = 0; x < els.length; x++) els[x].style.filter = "none";
 // };
+function enableEditButton() {
+  if (document.querySelectorAll("input.checkboxes:checked").length == 1) {
+    document.getElementById("editButton").removeAttribute("disabled");
+  } else {
+    document.getElementById("editButton").setAttribute("disabled", "disabled");
+  }
+}
