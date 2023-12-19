@@ -56,7 +56,7 @@ function createCards() {
       checkBox.setAttribute("type", "checkbox");
       checkBox.setAttribute("id", `checkbox-${obj.id}`); // Add item ID to the checkbox ID
       checkBox.addEventListener("change", function () {
-        enableDeleteButton();
+        enableDeleteButton(); selectAllDisable();
 
         // Get the item ID from the checkbox ID
         const itemId = parseInt(this.id.split("-")[1], 10);

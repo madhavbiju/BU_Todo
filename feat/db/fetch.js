@@ -8,7 +8,7 @@ const port = 3000;
 const pool = mysql.createPool({
   host: "localhost",
   user: "root",
-  password: "Eg@riot63",
+  password: "admin123",
   database: "todo",
   connectionLimit: 10,
 });
