@@ -1,10 +1,22 @@
 <link rel="stylesheet" href="/feat/search/search.css" />
+<div class="input-group">
+  <div class="input-group-prepend"></div>
+  <form action="#" class="searchbox col-md-11">
+    <input
+      class="col-md-8"
+      type="search"
+      placeholder="Type to search..."
+      name="search"
+      id="searchInput"
+    />
+  </form>
+  <button
+    class="btn btn-outline-secondary col-md-1"
+    id="searchButton"
+    type="button"
+    onclick="submitForm()"
+  >
+    Search
+  </button>
+</div>
 <script src="/feat/search/search.js"></script>
-<form action="#" class="searchbox">
-  <input
-    type="text"
-    placeholder="Type to search..."
-    name="search"
-    id="searchInput"
-  />
-</form>

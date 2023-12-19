@@ -1,24 +1,26 @@
-let buttonAdd = document.getElementById("chat-open-button");
+function enableDeleteButton() {
+  globalThis.checkboxes = document.querySelectorAll("input.checkboxes:checked");
 
-function changeAdd() {
-  globalThis.checkboxes = document.querySelectorAll(
-    'input[id="checkbox"]:checked'
-  );
-
-  // Check if there is at least one checkbox checked
+  console.log(checkboxes);
   if (checkboxes.length > 0) {
-    buttonAdd.textContent = "Delete";
-    console.log(checkboxes);
-    buttonAdd.onclick = "";
+    document.getElementById("deleteButton").removeAttribute("disabled");
   } else {
-    // Set the button text to its original state if no checkboxes are checked
-    buttonAdd.textContent = "Add";
-    buttonAdd.onclick = buttonClickOn(); // Replace "originalText" with the actual original text
+    document
+      .getElementById("deleteButton")
+      .setAttribute("disabled", "disabled");
   }
 }
-
-//multiple delete button
-checkboxes.forEach((item) => {
-  console.log(item);
-  console.log("test");
-});
+function selectAll() {
+  checkboxes = document.querySelectorAll("#checkbox");
+  checkboxes.forEach((item) => {
+    item.checked = true;
+  });
+  deSelectButton.style.display = "block";
+}
+function deSelectAll() {
+  checkboxes = document.querySelectorAll("#checkbox");
+  checkboxes.forEach((item) => {
+    item.checked = false;
+  });
+  deSelectButton.style.display = "none";
+}
