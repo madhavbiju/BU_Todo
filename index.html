@@ -20,6 +20,7 @@
   </head>
   <body style="background-color: #ffefba">
     <div id="add-card" class="sticky-top"></div>
+    <div id="edit-card" class="sticky-top"></div>
     <header
       class="sticky-top"
       style="
@@ -44,7 +45,7 @@
 
     <div class="container-fluid" style="background: #ffefba">
       <div class="container">
-        <div id="multi-select"></div>
+        <!-- <div id="multi-select"></div> -->
         <div class="row justify-content-center">
           <div id="list"></div>
         </div>
@@ -53,13 +54,14 @@
   </body>
   <script>
     $(document).ready(function () {
-      $("#multi-select").load(
-        "./feat/multiple-selection/multipleSelection.html"
-      );
+      // $("#multi-select").load(
+      //   "./feat/multiple-selection/multipleSelection.html"
+      // );
       $("#searchbox").load("./feat/search/search.html");
       $("#list").load("./feat/listview/view.html");
       $("#floatingbutton1").load("./feat/floatingbutton/button.html");
       $("#add-card").load("./feat/add-card/add-card.html");
+      $("#edit-card").load("./feat/edit/edit.html");
     });
   </script>
   <script src="feat/db/fetch.js"></script>

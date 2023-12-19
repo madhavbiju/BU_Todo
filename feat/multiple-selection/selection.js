@@ -32,6 +32,7 @@ function selectOrDeselect() {
   let selectButton = document.getElementById("selectButton");
   if (selectButton.checked) {
     selectAll();
+    document.querySelector("#deleteButton").removeAttribute("disabled");
   } else {
     deSelectAll();
   }
