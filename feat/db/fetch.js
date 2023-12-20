@@ -82,6 +82,43 @@ app.delete("/items", async (req, res) => {
   }
 });
 
+// Edit by id
+app.put("/items/:id", async (req, res) => {
+  const itemId = req.params.id;
+  const updatedFields = req.body;
+
+  // Check if the request body contains valid fields to update
+  if (!updatedFields || Object.keys(updatedFields).length === 0) {
+    return res.status(400).json({ error: "Invalid or empty update fields" });
+  }
+
+  try {
+    // Create SET clause with placeholders for each field
+    const setClause = Object.keys(updatedFields)
+      .map((field) => `${field} = ?`)
+      .join(", ");
+
+    // Create array of values corresponding to the placeholders
+    const values = Object.values(updatedFields);
+
+    // Execute UPDATE query
+    const [result] = await pool.execute(
+      `UPDATE items SET ${setClause} WHERE id = ?`,
+      [...values, itemId]
+    );
+
+    if (result.affectedRows === 0) {
+      return res.status(404).json({ error: "No item found for update" });
+    }
+
+    res.json({ message: "Item updated successfully" });
+  } catch (error) {
+    console.error("Error updating data:", error);
+    res.status(500).json({ error: "Internal Server Error" });
+  }
+});
+
+
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
 });

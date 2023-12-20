@@ -3,6 +3,8 @@ editModalOn = () => {
   document.getElementById("edit-wrapper").style.display = "block";
   // document.getElementById("actionButton").style.display = "none";
   let checkbox = document.querySelectorAll("input.checkboxes:checked");
+  // console.log(checkbox[0].id);
+  console.log(document.querySelectorAll("input.checkboxes:checked")[0].id);
   console.log(checkbox[0].nextSibling.textContent);
 
   document
@@ -59,4 +61,13 @@ function enableEditButton() {
   } else {
     document.getElementById("editButton").setAttribute("disabled", "disabled");
   }
+}
+
+function editItem() {
+  var form = document.getElementById("edit-form");
+  var formData = new FormData(form);
+  // if (formData == null) {
+  //   formData = "";
+  // }
+  editObject(formData.get("title"), formData.get("description"));
 }
