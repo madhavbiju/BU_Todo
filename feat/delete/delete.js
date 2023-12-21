@@ -1,5 +1,5 @@
 function deleteItem(selectedItems) {
-  const itemIdsToDelete = selectedItems;
+  let itemIdsToDelete = selectedItems;
   console.log(JSON.stringify({ itemIds: itemIdsToDelete }));
   fetch("http://localhost:3000/items", {
     method: "DELETE",

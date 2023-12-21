@@ -14,9 +14,15 @@ modalOffButton = () => {
 addItem = () => {
   var form = document.getElementById("form");
   var formData = new FormData(form);
-  if (formData == null) {
-    formData = "";
+
+  // Check if the "description" field is empty or null, and set it to an empty string
+  if (
+    formData.get("description") == null ||
+    formData.get("description").trim() === ""
+  ) {
+    formData.set("description", "");
   }
+
   addObject(formData.get("title"), formData.get("description"));
 };
 
