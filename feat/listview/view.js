@@ -21,6 +21,7 @@ async function fetchData() {
 fetchData();
 selectedItems = [];
 function createCards() {
+  globalThis.resultsFound = 0;
   console.log(searchParam);
   let cardContainer = document.querySelector("#cardContainer");
   data.forEach((obj, index) => {
@@ -31,6 +32,9 @@ function createCards() {
       searchParam === "" ||
       searchParam == null
     ) {
+      resultsFound = 1;
+      var noResultsElement = document.getElementById("noResults");
+      noResultsElement.style.display = "none";
       // Create card element
       let cardDiv = document.createElement("div");
       cardDiv.className = "col-md-12 mb-4";
@@ -87,4 +91,8 @@ function createCards() {
       cardContainer.querySelector(".row").appendChild(cardDiv);
     }
   });
+  if (resultsFound == 0) {
+    var noResultsElement = document.getElementById("noResults");
+    noResultsElement.style.display = "block";
+  }
 }
