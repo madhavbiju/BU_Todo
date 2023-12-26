@@ -1,5 +1,5 @@
 const { describe } = require("node:test");
-
+// let selectedItems = [];
 function enableDeleteButton() {
   globalThis.checkboxes = document.querySelectorAll("input.checkboxes:checked");
 
@@ -17,7 +17,12 @@ function selectAll() {
   console.log(checkboxes);
   checkboxes.forEach((item) => {
     item.checked = true;
+
+    let itemId = parseInt(item.id.split("-")[1], 10);
+    // console.log(itemId);
+    selectedItems.push(itemId);
   });
+  console.log(selectedItems);
   // deSelectButton.style.display = "block";
 }
 function deSelectAll() {
@@ -25,7 +30,8 @@ function deSelectAll() {
   checkboxes.forEach((item) => {
     item.checked = false;
   });
-  deSelectButton.style.display = "none";
+  selectedItems = [];
+  // deSelectButton.style.display = "none";
 }
 
 function selectOrDeselect() {
@@ -35,6 +41,9 @@ function selectOrDeselect() {
     document.querySelector("#deleteButton").removeAttribute("disabled");
   } else {
     deSelectAll();
+    document
+      .querySelector("#deleteButton")
+      .setAttribute("disabled", "disabled");
   }
 }
 

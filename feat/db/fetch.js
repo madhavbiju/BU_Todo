@@ -34,7 +34,7 @@ app.get("/items", async (req, res) => {
 app.post("/items", async (req, res) => {
   const { title, description } = req.body;
 
-  if (!title || !description) {
+  if (!title) {
     return res
       .status(400)
       .json({ error: "Title and description are required" });
@@ -82,8 +82,6 @@ app.delete("/items", async (req, res) => {
   }
 });
 
-<<<<<<< Updated upstream
-=======
 // Edit by id
 app.put("/items/:id", async (req, res) => {
   const itemId = req.params.id;
@@ -120,7 +118,6 @@ app.put("/items/:id", async (req, res) => {
   }
 });
 
->>>>>>> Stashed changes
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
 });
