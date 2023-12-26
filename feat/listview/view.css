@@ -23,8 +23,9 @@
   overflow: hidden;
 } */
 
-#checkbox {
-  opacity: 0;
+.checkboxes {
+  margin-left: 10px;
+  margin-right: 10px;
   width: 20px;
   height: 20px;
   background-color: #eee;
@@ -33,7 +34,7 @@
   /* Hide the default checkbox */
 }
 
-#checkbox:hover {
+.checkboxes:hover {
   opacity: 100;
   width: 20px;
   height: 20px;
@@ -44,13 +45,13 @@
 }
 
 /* Style for the custom checkbox when checked */
-#checkbox:checked {
+.checkboxes:checked {
   opacity: 100;
   background-color: #ffefba; /* Change background color when checked */
   border: 1px solid #ffefba;
 }
 
 /* Show the checkmark when the checkbox is checked */
-#checkbox:checked + #custom-checkbox:after {
+.checkboxes:checked + #custom-checkbox:after {
   display: block;
 }
