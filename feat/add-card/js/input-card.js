@@ -1,3 +1,13 @@
+// Get the input element and button
+var inputBox = document.getElementById("title");
+var submitButton = document.getElementById("add");
+
+// Add input event listener to the input box
+inputBox.addEventListener("input", function () {
+  // Enable the button if there is input, disable it otherwise
+  submitButton.disabled = inputBox.value.trim() === "";
+});
+
 // add button on click
 modalOnButton = () => {
   document.getElementById("card-wrapper").style.display = "block";
@@ -24,14 +34,15 @@ addItem = () => {
   }
 
   addObject(formData.get("title"), formData.get("description"));
+  location.reload();
 };
 
-// title validation  active only when title is inputed
-$("input[id='title']").on("keyup", function () {
-  if ($(this).val() != "") {
-    $("button[id='add']").removeAttr("disabled");
-  }
-});
+// // title validation  active only when title is inputed
+// $("input[id='title']").on("keyup", function () {
+//   if ($(this).val() != "") {
+//     $("button[id='add']").removeAttr("disabled");
+//   }
+// });
 
 //background blur when modal open
 
