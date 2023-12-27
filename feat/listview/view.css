@@ -24,8 +24,6 @@
 } */
 
 .checkboxes {
-  width: 20px;
-  height: 20px;
   background-color: #eee;
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -52,7 +50,7 @@
 }
 
 /* Show the checkmark when the checkbox is checked */
-#checkbox:checked + #custom-checkbox:after {
+.checkboxes:checked + #custom-checkbox:after {
   display: block;
 }
 

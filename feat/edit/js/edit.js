@@ -70,4 +70,5 @@ function editItem() {
   //   formData = "";
   // }
   editObject(formData.get("title"), formData.get("description"));
+  location.reload();
 }
