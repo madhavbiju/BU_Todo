@@ -1,17 +1,23 @@
 <link rel="stylesheet" href="/feat/floatingbutton/button.css" />
 <script src="/feat/multiple-selection/selection.js"></script>
 <script src="/feat/add-card/js/input-card.js"></script>
+<script src="/feat/edit/js/edit.js"></script>
 <!-- chat open -->
 <div class="d-flex justify-content-between m-3 mb-0">
   <div class="col-md-4 d-flex">
-    <button
+    <input
       id="selectButton"
-      type="button"
+      type="checkbox"
       class="floatButton col-md-1.5 btn btn-outline-secondary btn-lg btn-block me-2"
-      onclick="selectAll()"
+      onclick="selectOrDeselect()"
+    />
+    <label
+      class="col-md-1.5 me-2"
+      for="selectButton"
+      style="color: black; padding: 10px"
+      >Select All</label
     >
-      Select All
-    </button>
+
     <button
       id="deSelectButton"
       type="button"
@@ -31,6 +37,15 @@
       onclick="deleteItem(selectedItems)"
     >
       Delete
+    </button>
+    <button
+      id="editButton"
+      disabled
+      type="button"
+      class="floatButton col-md-1.5 btn btn-outline-secondary btn-lg btn-block me-2"
+      onclick="editModalOn()"
+    >
+      Edit
     </button>
     <button
       id="addButton"

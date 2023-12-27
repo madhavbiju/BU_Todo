@@ -55,3 +55,8 @@
 #checkbox:checked + #custom-checkbox:after {
   display: block;
 }
+
+#noResults {
+  display: none;
+  text-align: center;
+}
