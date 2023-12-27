@@ -23,17 +23,18 @@
   overflow: hidden;
 } */
 
-#checkbox {
-  opacity: 0;
+.checkboxes {
   width: 20px;
   height: 20px;
   background-color: #eee;
   border: 1px solid #ccc;
   border-radius: 4px;
+  margin-right: 10px;
+  margin-left: 10px;
   /* Hide the default checkbox */
 }
 
-#checkbox:hover {
+.checkboxes:hover {
   opacity: 100;
   width: 20px;
   height: 20px;
@@ -44,7 +45,7 @@
 }
 
 /* Style for the custom checkbox when checked */
-#checkbox:checked {
+.checkboxes:checked {
   opacity: 100;
   background-color: #ffefba; /* Change background color when checked */
   border: 1px solid #ffefba;

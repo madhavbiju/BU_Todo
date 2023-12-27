@@ -19,9 +19,22 @@ modalOffButton = () => {
   document.getElementById("card-wrapper").style.display = "none";
 };
 
+async function fetchData() {
+  try {
+    const response = await fetch("http://localhost:3000/items"); // Replace with your API endpoint
+    globalThis.data = await response.json();
+  } catch (error) {
+    console.error("Error fetching data:", error);
+  }
+}
+
+// Call the function to fetch data from the API
+fetchData();
+
 //adding list in todo
 
 addItem = () => {
+  globalThis.resultsFound = 0;
   var form = document.getElementById("form");
   var formData = new FormData(form);
 
@@ -32,17 +45,19 @@ addItem = () => {
   ) {
     formData.set("description", "");
   }
-
-  addObject(formData.get("title"), formData.get("description"));
-  location.reload();
+  data.forEach((obj, index) => {
+    if (obj.title.toLowerCase() === formData.get("title").toLowerCase()) {
+      resultsFound = 1;
+    }
+  });
+  if (resultsFound == 1) {
+    var element = document.getElementById("a-exists");
+    element.style.display = "block";
+  } else {
+    addObject(formData.get("title"), formData.get("description"));
+    location.reload();
+  }
 };
-
-// // title validation  active only when title is inputed
-// $("input[id='title']").on("keyup", function () {
-//   if ($(this).val() != "") {
-//     $("button[id='add']").removeAttr("disabled");
-//   }
-// });
 
 //background blur when modal open
 
