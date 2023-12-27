@@ -48,34 +48,6 @@ h1 {
   background: rgba(255, 255, 255, 0.56);
   resize: none;
 }
-.add-button button {
-  border: none;
-  width: 8.0625rem;
-  height: 3.375rem;
-
-  border-radius: 0.5rem;
-  background-color: #b99e91bd;
-  transition: 0.3s;
-  color: #656565;
-  text-align: center;
-  font-family: Poppins;
-  font-size: 1.5rem;
-  /* box-shadow: 3px 6px 13px #000000a3; */
-  /* box-shadow: 10px 10px 5px lightblue; */
-}
-.add-button button:active {
-  box-shadow: 3px 6px 13px #000000a3;
-}
-.add-button button:disabled {
-  background-color: #fcf2d0;
-  color: black;
-  pointer-events: none;
-}
-.add-button button:hover {
-  color: black;
-  box-shadow: 1px 7px 21px #000000a3;
-  /* box-shadow: 3px 6px 13px #000000a3; */
-}
 
 .close {
   font-family: Poppins;
